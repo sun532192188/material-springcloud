@@ -13,6 +13,20 @@ spring:
       initial-size: 5
       validation-query:  SELECT *
       connection-properties: characterEncoding=utf8
+    jpa:   #指定数据库
+     database: MYSQL
+     show-sql: true  #是否打印sq
+     properties: 
+       hibernate:
+        current_session_context_class: org.springframework.orm.hibernate4.SpringSessionContext
+     hibernate:
+       #create：表示启动的时候先drop，再create
+       #create-drop: 也表示创建，只不过再系统关闭前执行一下drop
+       #update: 这个操作启动的时候会去检查schema是否一致，如果不一致会做scheme更新
+       #validate: 启动时验证现有schema与你配置的hibernate是否一致，如果不一致就抛出异常，并不做更新
+       ddl-auto: update
+       naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy   #命名策略
+       properties.hibernate.dialect : org.hibernate.dialect.MySQLDialect   #允许Hibernate针对特定的关系数据库生成优化的SQL
    
    #配置文件上传
    http: 
@@ -31,4 +45,6 @@ logging:               #配置日志
     org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
     com.itmuch: DEBUGGER
 
-    
+         
+   
+  
