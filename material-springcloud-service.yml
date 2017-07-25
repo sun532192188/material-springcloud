@@ -37,4 +37,4 @@ logging:               #≈‰÷√»’÷æ
     org.hibernate: info
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
     org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
-    com.material.website: DEBUGGER
+ #   com.material.website: DEBUGGER
