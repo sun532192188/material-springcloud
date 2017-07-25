@@ -7,7 +7,6 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     #连接池配置
     type: org.apache.commons.dbcp2.BasicDataSource
-    datasource:
     dbcp2:
       max-wait-millis: 10000
       min-idle: 5
